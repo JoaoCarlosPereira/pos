@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mobile First</title>  
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style type="text/css">
+            /* ...estilos para mobile... */
+            @media screen and (min-width: 800px) { /* ...estilos para desktop... */
+                .group {
+                    width: 50%;
+                    margin: 0 auto;
+                }
+
+                .partA, .partB {
+                    float: left;
+                }
+
+                .partA {
+                    width: 31.25%;
+                    margin-right: 2%;
+                }
+
+                .partB {
+                    width: 66.66667%;
+                } 
+            }
+
+            /* ...estilo para ficar apresentável... */
+
+            .partA, .partB {
+                background: #888;
+                height: 250px;
+                border-radius: 4px;
+                color: #FFF;
+                font-family: Helvetica;
+                text-align: center;
+            }
+
+            h1 {
+                padding: 100px 0;
+                font-size: 1em;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="group">
+            <div class="partA"><h1>Parte A</h1></div>
+            <div class="partB"><h1>Parte B</h1></div>
+        </div>
+    </body>
+</html>

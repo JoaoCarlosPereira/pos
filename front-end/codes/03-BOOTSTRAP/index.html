@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Programação Web</title>
+        <meta charset="UTF-8">
+        
+        <link rel="stylesheet" type="text/css" href="css/estilo.css" />
+
+        <link rel="stylesheet" href="plugins/bootstrap-3.3.7-dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="plugins/font-awesome-4.7.0/css/font-awesome.css" />
+
+        <script src="plugins/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+        <script src="js/jquery-3.2.0.min.js"></script>
+        <script src="js/modernizr.js"></script>
+        <script src="js/menu.js"></script>
+        <script src="js/troca.js"></script>
+    </head>
+
+    <body onload="abrirPag('home.html');">
+        <div class="container-980">
+            <header class="hidden-xs">
+                <h1>Site de exemplo!</h1>
+            </header>
+
+            <!-- ***
+            * MENU *
+            **** -->
+            <div id="menu-smartphone" class="visible-xs">
+                <div id="fechar-menu">
+                    <div class="hi-icon-wrap hi-icon-effect-1 hi-icon-effect-1a">
+                        <i class="fa fa-close hi-icon"></i>
+                    </div>
+                </div>
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="#" onClick="abrirPag('home.html');">
+                            HOME
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" onClick="abrirPag('link1.html');">
+                            LINK 1
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" onClick="abrirPag('link2.html');">
+                            LINK 2
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" onClick="abrirPag('link3.html');">
+                            LINK 3
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" onClick="abrirPag('link4.html');">
+                            LINK 4
+                        </a>
+                    </li>
+                </ul>       
+            </div>
+            <div id="botao-menu" class="pull-right visible-xs">
+                <h1>Site de exemplo!</h1>
+                <i class="fa fa-bars"></i>
+            </div>
+            <nav id="menu" class="hidden-xs">
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="#" onClick="abrirPag('home.html');">
+                            HOME
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" onClick="abrirPag('link1.html');">
+                            LINK 1
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" onClick="abrirPag('link2.html');">
+                            LINK 2
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" onClick="abrirPag('link3.html');">
+                            LINK 3
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" onClick="abrirPag('link4.html');">
+                            LINK 4
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- *****************
+            * CONTEUDO - esquerda *
+            ****************** -->
+            <section id="conteudo_mostrar" class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+            </section>
+
+            <!-- ******************
+            * CONTEUDO - direita *
+            ******************* -->
+            <aside class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+                <h2>Links Úteis</h2>
+                <a href="http://www.w3c.br">
+                    W3C
+                </a>
+                <a href="http://www.w3c.br/divulgacao/pdf/guia-css-w3cbr.pdf" target="_blank">
+                    Guia do CSS
+                </a>
+                <a href="http://www.w3c.br/pub/Materiais/PublicacoesW3C/guia-xhtml-w3cbr.pdf">
+                    Guia do HTML
+                </a>
+                <a href="http://www.w3c.br/pub/Cursos/CursoCSS3/css-web.pdf">
+                    Curso CSS 3
+                </a>
+                <a href="http://www.w3c.br/pub/Cursos/CursoHTML5/html5-web.pdf">
+                    Curso HTML 5
+                </a>
+            </aside>
+
+            <div class="clearfix"></div>
+
+            <!-- *****
+            * RODAPÉ *
+            ****** -->
+            <footer>
+                <img src="images/logo_pequena.png" alt="logotipo"/>
+                <i class="fa fa-map-marker"></i>
+                Rua das Pitangas, 000 - Centro <br>
+                São Miguel do Oeste / SC - Cep: 89900-000 <br>
+                +55 (99) 0000.0000 <br><br>
+                Copyright <i class="fa fa-copyright"></i> Unoesc. Todos os direitos reservados.
+            </footer>
+        </div>
+    </body>
+</html>

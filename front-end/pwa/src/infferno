@@ -1,0 +1,7 @@
+curl -X POST -H "Authorization: key=AIzaSyDfeaBhixRR1HednpufPbR0qIOkpeSvXMI" -H "Content-Type: application/json" -d '{
+  "notification": {
+    "title": "Hello World PWA",
+    "body": "Hi",
+  },
+  "to": "APA91bFGUgv0JRfhDfxeLKlDOftQuUpO69QIz5raT2SKBokHC7HdQdZNkWRaJHWbzNr9yME4BO-ZSv9TMxejSq0-Zf3ASSVH6Bux00Co4XbGh3NnPhoCBnmGPNKiUgl-MPJHm24eQF2J"
+}' "https://fcm.googleapis.com/fcm/send"

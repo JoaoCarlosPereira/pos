@@ -1,0 +1,20 @@
+<html>
+  <head>
+  <title>Funções</title>
+  <script type="text/javascript" src="funcoes.js"></script>
+  </head>
+  <body>
+    <a href="#" onclick="alo();">Chamar a função</a>
+   <form>
+     <input type="button" value = "Chamar função" onclick="alo();"/><br>
+     <input type="button" value = "Chamar função" onclick="saudacao('Verônica');"/> 
+   </form>
+   <br>
+   <br>
+   <br>
+   <form>
+     <input type="text" name="txtNome" id = "txtNome"/>
+     <input type="button" name="btn_saudacao" onclick = "saudacao(document.getElementById('txtNome').value);"/>
+   </form>   
+  </body>
+</html>

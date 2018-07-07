@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Olá mundo!</title>
+    <link rel="stylesheet" type="text/css" href="estilo.css" media="all">
+    <link rel="manifest" href="manifest.json">
+  </head>
+  <body>
+    <h1 class="vertical-container">Olá mundo</h1>
+
+    <!-- SCRIPT PARA CRIAR UM PROJETO COM FIREBASE -->
+<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyANA88TLO0ienRRh30niaEbhjieZxxJY_c",
+    authDomain: "teste-f073f.firebaseapp.com",
+    databaseURL: "https://teste-f073f.firebaseio.com",
+    projectId: "teste-f073f",
+    storageBucket: "teste-f073f.appspot.com",
+    messagingSenderId: "872463725757"
+  };
+  firebase.initializeApp(config);
+</script>
+    <!-- FIM SCRIPT PARA CRIAR UM PROJETO COM FIREBASE -->
+
+    <!-- SCRIPT PARA REGISTRO DE SERVIÇO DE TRABALHO -->
+    <script>
+      if('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js')
+          .then(function() {
+                console.log('Service Worker Registered');
+          });
+      }
+    </script>
+    <!-- FIM SCRIPT PARA REGISTRO DE SERVIÇO DE TRABALHO -->
+
+    <!-- SCRIPT PARA CONFIGURAR NOTIFICAÇÕES PUSH -->
+    <script>
+      const messaging = firebase.messaging();
+
+      messaging.requestPermission()
+      .then(function() {
+        console.log('Notification permission granted.');
+        return messaging.getToken();
+      })
+      .then(function(token) {
+        console.log(token);
+      })
+      .catch(function(err) {
+        console.log('Unable to get permission to notify.', err);
+      })
+    </script>
+    <!-- FIM SCRIPT PARA CONFIGURAR NOTIFICAÇÕES PUSH -->
+
+  </body>
+</html>

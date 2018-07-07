@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Vídeo</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Vídeo em HTML5</h1> 
+
+        <video autoplay id="video" width="100%">    
+            <source src="audio/video.mp4" type="video/mp4">
+            <p>Seu navegador não possui suporte a HTML5</p>
+        </video>
+
+        <button type="button" onclick="tocar()">Play</button>
+
+        <script type="text/javascript">
+            function tocar() {
+                video = document.getElementById('video');
+
+                if (video.paused)
+                    video.play();
+                else
+                    video.pause();
+            }
+        </script>
+
+    </body>
+</html>

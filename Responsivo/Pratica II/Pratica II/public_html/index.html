@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Prática II</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style type="text/css">
+            h1 {
+                display: table-cell;
+                vertical-align: middle;
+            }
+            .grupo {
+                border-radius: 4px;
+                color: #FFF;
+                font-family: Helvetica;
+                text-align: center; 
+                margin: 1px;
+            }
+            .Laranja {
+                background: #ff3300;
+                height: 50px;
+            }
+            .Amarelo {
+                background: #ffcc00; 
+                height: 80px;
+            }
+            .Azul {
+                background: #000099; 
+                height: 70px;
+            }
+            .Cinza {
+                background: #999999;
+                height: 50px;   
+            }  
+
+            @media (min-width: 768px) {
+                footer {
+                    display: flex;
+                    flex-wrap: wrap;
+                }
+                .Cinza {
+                    flex: 49%;
+                    float: left;
+                }
+            }
+
+            @media (min-width: 1024px) {
+                header, section {
+                    display: flex;
+                }
+                .Laranja {
+                    height: 100px;           
+                    width:  50%;
+                    float: left;
+                    position: relative;
+                }
+                .Amarelo {
+                    height: 150px; 
+                }
+                .Azul {
+                    height: 200px; 
+                    width: 33.33333333%;
+                    float: left;
+                    position: relative;
+                }
+                .Cinza {
+                    flex: 24%;
+                    float: left;
+                }
+            }
+
+
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="grupo Laranja">
+
+            </div>
+            <div class="grupo Laranja">
+
+            </div>
+        </header>
+        <nav>
+            <div class="grupo Amarelo">
+
+            </div>
+        </nav>
+
+        <section>
+            <div class="grupo Azul">
+
+            </div>
+            <div class="grupo Azul">
+
+            </div>
+            <div class="grupo Azul">
+
+            </div>
+        </section>
+        <footer>
+            <div class="grupo Cinza">
+
+            </div> 
+            <div class="grupo Cinza">
+
+            </div>
+            <div class="grupo Cinza">
+
+            </div>
+            <div class="grupo Cinza">
+
+            </div>
+        </footer>
+    </body>
+</html>

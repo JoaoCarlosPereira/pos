@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Geolocalização</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <script src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyArR1IS6dxrqfIpPiO46PSiAbhAJEVzseM"></script>
+    </head>
+    <body>
+        <h1>Geolocalização</h1>
+
+        <p>Exemplo de geolocalização</p>
+
+        <div id="msg">Latitude e longitude</div>
+
+        <div id="mapa" style="width: 600px;height: 400px;"></div>
+
+        <button type="button" onclick="GetLocation()">OK</button>
+
+        <script type="text/javascript">
+            var oMsg = document.getElementById('msg');
+            function GetLocation() {
+                if (navigator.geolocation) {
+                    //buscar a localização
+                    navigator.geolocation.getCurrentPosition(showPosition, showError);
+
+                } else {
+                    //Se não tiver suporte a html5
+                    oMsg.innerHTML = "Seu navagador não possuí suporte a HTML5";
+                }
+
+
+            }
+
+            function showPosition(position) {
+                lat = position.coords.latitude;
+                lon = position.coords.longitude;
+
+                oMsg.innerHTML = "Latitude : " + lat + "<br> Longitude: " + lon;
+
+                mapa = document.getElementById("mapa");
+
+                latlon = new google.maps.LatLng(lat, lon);
+                var opcoes = {
+                    zoom: 15,
+                    center: latlon,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                };
+
+                mapa = new google.maps.Map(mapa, opcoes);
+                var marker = new google.maps.Marker({
+                    position: latlon,
+                    map: mapa,
+                    title: "Oi, eu estou aqui!"
+                });
+            }
+
+            //funcioao para retornar o erro
+            function showError(error) {
+                switch (error.code) {
+                    case error.PERMISSION_DENIED:
+                        oMsg.innerHTML = "Permissão negada!";
+                        break;
+                    case error.POSITION_UNAVALIABLE:
+                        oMsg.innerHTML = "Posição não encontrada";
+                        break;
+                    case error.TIMEOUT:
+                        oMsg.innerHTML = "Não foi possível se conectar";
+                        break;
+                    case error.UNKNOWN_ERROR:
+                        oMsg.innerHTML = "Erro desconhecido";
+                        break;
+                }
+            }
+
+        </script>
+
+    </body>
+</html>

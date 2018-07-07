@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans:300");
+
+* {
+    margin: 0 auto;
+    text-align: center
+}
+
+
+.texto {
+    color: #ccc;
+    font-family: "Josefin Sans"; 
+}
+
+.Retangulo {
+    border: thin solid #ccc;
+    border-radius: 6px;
+    text-align: center; 
+    width: 250px;
+    padding: 10px;
+}
+
+.icone {
+    width: 20%;
+}
+
+.Campo{
+    width: 40px;
+    text-align: left;
+}

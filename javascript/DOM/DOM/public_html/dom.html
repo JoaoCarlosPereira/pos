@@ -1,0 +1,140 @@
+<html> 
+    <head>
+        <meta charset="UTF-8">
+    </head>
+    <body> 
+        <script>
+            function validaCampoNumerico(id) {
+                if (isNaN(document.getElementById(id).value)) {
+                    alert(document.getElementById(id).value + 'Não é um valor númerico válido.');
+                    return false;
+                }
+                return true;
+            }
+
+
+            function validaCampoSelect(id) {
+                var indice = document.getElementById(id).value;
+                if (indice == '0') {
+                    alert('Favor preencher o ComboBox');
+                    return false;
+                }
+                return true;
+            }
+
+            function validaCampoCheckbox(id) {
+                var elemento = document.getElementById(id);
+                if (!elemento.checked) {
+                    alert('Favor preencher o campo checkbox.');
+                    return false;
+                }
+                return true;
+            }
+
+            function validaCamposRadio(nome) {
+                var opcoes = document.getElementsByName(nome);
+                var selecionado = false;
+                for (var i = 0; i < opcoes.length; i++) {
+                    if (opcoes[i].checked) {
+                        selecionado = true;
+                        break;
+                    }
+                }
+                if (!selecionado) {
+                    alert('Favor preencher o campo radio.');
+                    return false;
+                }
+                return true;
+            }
+
+            function Verifica() {
+
+                if (document.form.nome.value == '') {
+                    alert('Favor preencher o campo Nome');
+                    document.form.nome.focus();
+                    return false;
+                }
+                if (document.form.email.value == '') {
+                    alert('Favor preencher o campo email');
+                    document.form.email.focus();
+                    return false;
+                }
+                if (document.form.senha.value == '') {
+                    alert('Favor preencher o campo senha');
+                    document.form.senha.focus();
+                    return false;
+                }
+
+                if (document.form.rep_senha.value == '') {
+                    alert('Favor preencher o campo Repetir senha');
+                    document.form.rep_senha.focus();
+                    return false;
+                }
+
+                if (!validaCampoNumerico('camponum')) {
+                    document.form.numerico.focus();
+                    return false;
+                }
+
+                if (!validaCampoSelect('combo')) {
+                    document.form.combobox.focus();
+                    return false;
+                }
+
+                if (!validaCampoCheckbox('checkbox')) {
+                    document.form.checkbox.focus();
+                    return false;
+                }
+
+                if (!validaCamposRadio('radio')) {
+                    document.getElementById('Male').focus();
+                    return false;
+                }
+            }
+            function hidestatus() {
+                windows.status = '';
+                return true;
+            }
+        </script>
+
+
+        <form name="form" action="enviar.php" method="post">
+            Nome:<br/>
+            <input name="nome" type="text"/><br/><br/>
+            Email:<br/>
+            <input name="email" type="text"/><br/><br/>
+            Senha:<br/>
+            <input name="senha" type="password"/><br/><br/>
+            Repetir senha:<br/>
+            <input name="rep_senha" type="password"/><br/><br/>
+
+            <br>
+            Exemplos:
+            <br>
+            <br>
+            Campo numérico:<br/>
+            <input id="camponum" name="numerico" type="text"/><br/><br/>
+
+            Campo Combo:<br/>
+            <select id="combo" name="combobox">
+                <option selected value="0">Selecione uma marca.</option>
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="mercedes">Mercedes</option>
+                <option value="audi">Audi</option>
+            </select>    
+            <br/><br/>
+
+            CheckBox:<br/>
+            <input type="checkbox" id="checkbox" name="checkbox" value="Bike">Eu tenho uma bike
+            <br/><br/>
+
+
+            Radio:><br/>
+            <input type="radio" id="Male" name="radio" value="male"> Masculino
+            <input type="radio" id="Female" name="radio" value="female"> Feminino<br>        
+
+            <input name="enviar" type="submit" value="Enviar" onclick='return Verifica();' class="botao"/> 
+        </form>
+    </body>
+</html>

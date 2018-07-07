@@ -1,0 +1,19 @@
+<html> 
+    <head>
+    </head>
+    <body> 
+        <script type="text/javascript" src="js/validacao.js" />
+        <form name="form" action="enviar.php" method="post">
+            Nome:<br/>
+            <input name="nome" type="text"/><br/><br/>
+            Email:<br/>
+            <input name="email" type="text"/><br/><br/>
+            Senha:<br/>
+            <input name="senha" type="password"/><br/><br/>
+            Repetir senha:<br/>
+            <input name="rep_senha" type="password"/><br/><br/>
+
+            <input name="enviar" type="submit" value="Enviar" onclick='return Verifica();' class="botao"/> 
+        </form>
+    </body>
+</html>

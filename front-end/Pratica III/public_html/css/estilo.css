@@ -1,0 +1,196 @@
+@charset "UTF-8";
+
+.container-980 {
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+a, a:hover {
+    text-decoration: none !important;
+    transition: 0.3s !important;
+}
+
+
+body header {
+    background: #ccc;
+    height: 100px;
+    padding: 0px 15px;
+}
+body header h1 {
+    display: inline-block;
+}
+
+
+body nav {
+    background: #333;
+}
+body nav ul {
+    margin: 0px;
+}
+body nav ul li {
+    display: inline-block;
+}
+body nav ul li a {
+    padding: 15px;
+    display: block;
+    color: #777;
+    font-weight: 600;
+}
+body nav ul li a:hover, body nav ul li a:focus {
+    color: #fff;
+}
+
+
+body section {
+    min-height: 500px !important;
+    background: #ccc;
+    padding-bottom: 15px;
+}
+body section article {
+}
+body section article h2 {
+    display: inline-block;
+}
+body section article form button {
+    transition: 0.3s !important;
+    background-color: gray !important;
+    color: #fff !important;
+    font-weight: 600;
+}
+body section article form button:hover {
+    background-color: #adabab !important;
+}
+
+
+body aside {
+    min-height: 500px !important;
+    background: #E4E4E4;
+    padding-bottom: 15px;
+}
+body aside h2 {
+    font-weight: 600;
+}
+body aside a {
+    display: block;
+    color: #000;
+    padding: 5px 0px;
+}
+body aside a:hover {
+    color: #228B22;
+}
+
+
+body footer {
+    background: #333;
+    color: #777;
+    padding: 15px;
+}
+body footer img {
+    display: block;
+    margin-bottom: 15px;
+}
+body footer i.fa-map-marker {
+    color: #60C659;
+}
+
+
+/* RESPONSIVO */
+@media (max-width: 767px) {
+    #botao-menu {
+        position: fixed;
+        z-index: 999;
+        background: #ffffff;
+        height: 50px;
+        display: table !important;
+        width: 100%;
+        padding: 0px 15px;
+    }
+    #botao-menu h1 {
+        display: table-cell;
+        vertical-align: middle;
+        margin: 0px;
+    }
+    #botao-menu i {
+        display: table-cell;
+        vertical-align: middle;
+        font-size: 2em;
+    }
+    #menu-smartphone {
+        width: 300px;
+        min-height: 1024px; 
+        background: #28282e;
+        right: -300px;
+        z-index: 9999;
+        position: fixed;
+        -webkit-transition: all 500ms cubic-bezier(0.785, 0.000, 0.580, 1.000); 
+        -moz-transition: all 500ms cubic-bezier(0.785, 0.000, 0.580, 1.000); 
+        -o-transition: all 500ms cubic-bezier(0.785, 0.000, 0.580, 1.000); 
+        transition: all 500ms cubic-bezier(0.785, 0.000, 0.580, 1.000); /* custom */
+
+        -webkit-transition-timing-function: cubic-bezier(0.785, 0.000, 0.580, 1.000); 
+        -moz-transition-timing-function: cubic-bezier(0.785, 0.000, 0.580, 1.000); 
+        -o-transition-timing-function: cubic-bezier(0.785, 0.000, 0.580, 1.000); 
+        transition-timing-function: cubic-bezier(0.785, 0.000, 0.580, 1.000); /* custom */
+    }
+    #menu-smartphone.aberto {
+        right: 0px;
+    }
+    #menu-smartphone #fechar-menu {
+        display: inline-block;
+        float: right;
+        padding: 10px;
+    }
+    #menu-smartphone #fechar-menu div {
+        color: #ccc;
+        border: 2px solid #ccc;
+        border-radius: 48px;
+        -o-border-radius: 48px;
+        -moz-border-radius: 48px;
+    }
+    #menu-smartphone #fechar-menu div i {
+        padding: 12px 14px;
+    }
+    #menu-smartphone ul {
+        margin-top: 60px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    #menu-smartphone ul li {
+        border-bottom: 1px solid #3a3a41;
+        
+        border-bottom-color: #3a3a41;
+        border-bottom-style: solid;
+        border-bottom-width: 1px;
+
+    }
+    #menu-smartphone ul li a {
+        color: #b9b9b9; 
+        font-size: 0.75em;
+        display: block;
+        padding: 15px 10px 15px 0px
+        text-transform: uppercase;
+        font-weight: 400;
+        text-decoration: none;
+    }
+
+    body section {
+        margin-top: 50px;
+    }
+    body section, body aside {
+        min-height: auto !important;
+    }
+    body section article form .form-group {
+        padding: 0px;
+    }
+    body footer {
+        text-align: center;
+    }
+    body footer img {
+        margin: 0 auto 15px;
+    }
+}
+@media (max-width: 360px) {
+    #botao-menu h1 {
+        font-size: 2.2em;
+    }
+}

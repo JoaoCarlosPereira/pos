@@ -1,0 +1,30 @@
+<html>
+  <head>
+  <title>oi</title>
+  <!--<script type="text/javascript" src="script.js"></script>-->
+  </head>
+  <body>
+    <script type="text/javascript" src="script.js"></script>
+     <a href = "#" onmouseover = "mouseSobre();"  onmouseout = "mouseFora();">Passe o mouse</a>
+     <div id = "resultado"> </div>
+
+
+   <form name="frmBusca" action="http://www.google.com/search"  method="get" onsubmit = "return validaCampo()">
+	 Termo: <input type="text" name="q" id = "q" />
+	 <input type="submit" name="btnBuscar" value="Buscar"/>
+     <br>
+     <br>
+     <input type="text" name="txt1" id = "txt1" onfocus = "trataEntrada('txt1')" onblur = "trataSaida('txt1')"/>
+     <input type="text" name="txt2" id = "txt2" onfocus = "trataEntrada('txt2')" onblur = "trataSaida('txt2')"/>
+
+    <br>
+    <br>
+<input type="text" name="txtOrigem" id = "txtOrigem" 			onkeydown = "copiaTexto('txtOrigem','txtDestino')"/>
+<input type="text" name="txtDestino" id = "txtDestino" />
+    
+   </form>
+
+
+
+  </body>  
+</html>

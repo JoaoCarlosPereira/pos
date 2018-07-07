@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+
+        <title>Prática III</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bowser/1.9.3/bowser.min.js"></script>
+        <style type="text/css">
+
+            .grupo {
+                border-radius: 4px;
+                color: #FFF;
+                font-family: Helvetica;
+                text-align: center;
+                margin: 1px;
+
+            }
+
+            #Browser {
+                display: table-cell;
+                vertical-align: middle;
+            }
+
+            .Laranja {
+                background: #ff3300;
+                height: 50px;
+            }
+            .Amarelo {
+                background: #ffcc00; 
+                height: 80px;
+                width: 100%;
+                display: table;
+            }
+            .Azul {
+                background: #000099; 
+                height: 80px;
+            }
+            .Cinza {
+                background: #999999;
+                height: 50px;   
+            }  
+
+            @media (min-width: 768px) {
+                footer {
+                    display: flex;
+                    flex-wrap: wrap;
+                }
+                .Cinza {
+                    flex: 49%;
+                    float: left;
+                }
+            }
+
+            @media (min-width: 1024px) {
+                header, section {
+                    display: flex;
+                }
+                .Laranja {
+                    height: 100px;           
+                    width:  50%;
+                    float: left;
+                    position: relative;
+                }
+                .Amarelo {
+                    height: 150px; 
+                }
+                .Azul {
+                    height: 250px; 
+                    width: 33.33333333%;
+                    float: left;
+                    position: relative;
+                }
+                .Cinza {
+                    flex: 24%;
+                    float: left;
+                }
+            }
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="grupo Laranja">
+
+            </div>
+            <div class="grupo Laranja">
+
+            </div>
+        </header>
+        <nav>
+            <div class="grupo Amarelo">
+                <div id="Browser"></div>
+            </div>
+        </nav>
+
+        <section>
+            <div class="grupo Azul">
+                <form>
+                    <label>Nome: </label><br/>
+                    <input type="Text" name="Nome"/><br/>
+                    <br/>
+                    <label>Telefone: </label><br/>
+                    <input type="tel" name="Nome"/><br/>
+                    <br/>
+                    <label>Email: </label><br/>
+                    <input type="email" name="Nome"/><br/>
+                    <br/>
+                    <label>Cep: </label><br/>
+                    <input type="text" name="cep" pattern="([0-9]{2}.[0-9]{3}-[0-9]{3})" title="CEP: 99.999-999"/> 
+                </form>
+            </div>
+            <div class="grupo Azul">
+
+            </div>
+            <div class="grupo Azul">
+
+            </div>
+        </section>
+        <footer>
+            <div class="grupo Cinza">
+
+            </div> 
+            <div class="grupo Cinza">
+
+            </div>
+            <div class="grupo Cinza">
+
+            </div>
+            <div class="grupo Cinza">
+
+            </div>
+        </footer>
+
+        <script>
+            document.getElementById('Browser').innerHTML = 'Você abriu essa página no navegador ' + bowser.name;
+        </script>
+    </body>
+</html>

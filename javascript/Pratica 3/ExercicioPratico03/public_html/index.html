@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+    <head>
+
+        <meta charset="utf-8">
+
+        <title></title>
+
+        <link href='http://fonts.googleapis.com/css?family=OpenSans:300,400,700' rel='stylesheet' type='text/css'>
+        <link href="css/style_form.css" rel="stylesheet" type="text/css"/>
+
+    </head>
+
+
+    <body>   
+        <section>
+
+            <div class="formulario">  
+
+                <form name="FrmPrincipal" action="" method="post" id="validate">                  
+
+                    <label>* Nome</label>
+                    <input name="nome" type="text" class="g">
+
+                    <label>Telefone</label>
+                    <input name="" type="text" class="p" id="telefone">
+
+                    <label>Sexo</label>
+                    <select name="" class="m">
+                        <option>Selecione</option>
+                        <option>Masculino</option>
+                        <option>Feminino</option>
+                    </select>
+
+                    <ul>
+                        <p>Estado civíl</p>
+                        <li><input type="radio" name="grupo" value="">Solteiro</li>
+                        <li><input type="radio" name="grupo" value="">Casado</li>
+                        <li><input type="radio" name="grupo" value="">Viúvo</li>
+                    </ul>
+
+                    <ul>
+                        <p>Selecione uma opcao</p>
+                        <li><input type="checkbox">Item 1</li>
+                        <li><input type="checkbox">Item 2</li>
+                        <li><input type="checkbox">Item 3</li>
+                    </ul>
+
+
+                    <input type="submit" value="Enviar" onsubmit="return Subimeter()">
+
+                </form>
+            </div><!--/formulario-->
+
+        </section>
+
+
+        <script type="text/javascript" src="js/Validacao.js"></script>
+    </body>
+</html>
+

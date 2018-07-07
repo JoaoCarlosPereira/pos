@@ -1,0 +1,59 @@
+body {
+    background: red;
+}
+
+h1 {
+    font-family: Arial, Tahoma, Verdana;
+    color: yellow;
+    font-size: 36px;
+    text-align: center;
+    text-shadow: 2px 2px 5px #000;
+}
+
+p {
+    font: 15px Verdana, Arial;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+    transition: all 1s;
+}
+
+a:hover {
+    color: black;
+    text-decoration: underline;
+    background: white;
+}
+
+img {
+    width: 200px;
+    margin: 10px;
+    transition: all 1s;
+}
+
+#img1 {
+    border-radius: 10px;
+    box-shadow: 2px 5px 10px #000;
+}
+
+#img2{
+    height: 200px;
+    border-radius: 100px;
+    
+}
+
+#img3{
+    filter: grayscale(100%);
+}
+
+#img1:hover, #img2:hover, #img3:hover{
+    filter: grayscale(0%); 
+    transform: scale(1.5);
+    transform: rotate(360deg);
+}
+
+.classe{
+    border: 5px solid #fff;
+}
